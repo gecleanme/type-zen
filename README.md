@@ -1,4 +1,4 @@
-# Wordle Vue
+# Type Zen
 
 A typing speed test game built with Vue 3, featuring dynamic quotes and multiple difficulty levels.
 
