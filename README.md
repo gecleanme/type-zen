@@ -2,6 +2,10 @@
 
 A typing speed test game built with Vue 3, featuring dynamic quotes and multiple difficulty levels.
 
+## Demo
+
+**Live Demo**: [https://typezen.miladkh.me](https://typezen.miladkh.me)
+
 ## Features
 
 - Real-time typing speed measurement (WPM)
