@@ -4,7 +4,7 @@ A typing speed test game built with Vue 3, featuring dynamic quotes and multiple
 
 ## Demo
 
-**Live Demo**: [https://typezen.miladkh.me](https://typezen.miladkh.me)
+**Live Demo (Currently only supports desktop use)**: [https://typezen.miladkh.me](https://typezen.miladkh.me)
 
 ## Features
 
