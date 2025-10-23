@@ -30,8 +30,8 @@ const statusColor = computed(() => {
     <div
       class="stat-card bg-purple-50 dark:bg-purple-900/30 rounded-lg p-4 text-center transition-colors duration-300"
     >
-      <div class="text-3xl font-bold" :class="statusColor">{{ gameStore.accuracy }}%</div>
-      <div class="text-sm text-gray-600 dark:text-gray-400">Accuracy</div>
+      <div class="text-3xl font-bold" :class="statusColor">{{ gameStore.accuracy }}</div>
+      <div class="text-sm text-gray-600 dark:text-gray-400">% Accuracy</div>
     </div>
 
     <!-- Time -->
