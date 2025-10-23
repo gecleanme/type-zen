@@ -46,9 +46,9 @@ npm run preview
 ## Game Mechanics
 
 - **Easy**: Short quotes (max 50 characters)
-- **Medium**: Medium quotes (min 100 characters)
-- **Hard**: Long quotes (min 200 characters)
-- **Expert**: Very long quotes (min 500 characters)
+- **Medium**: Medium quotes (max 100 characters)
+- **Hard**: Long quotes (max 200 characters)
+- **Expert**: Very long quotes (max 400 characters)
 
 WPM is calculated using the standard formula: (characters typed / 5) / (time in minutes)
 

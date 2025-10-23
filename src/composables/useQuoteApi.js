@@ -13,11 +13,11 @@ export const useQuoteApi = (difficulty = 'default') => {
       case 'easy':
         return { maxLength: 50 }
       case 'medium':
-        return { minLength: 100 }
+        return { maxLength: 100 }
       case 'hard':
-        return { minLength: 200 }
+        return { maxLength: 200 }
       case 'expert':
-        return { minLength: 280 }
+        return { maxLength: 400 }
       default:
         return {}
     }
