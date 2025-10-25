@@ -39,8 +39,8 @@ const statusColor = computed(() => {
     <div
       class="stat-card bg-green-50 dark:bg-green-900/30 rounded-lg p-4 text-center transition-colors duration-300"
     >
-      <div class="text-3xl font-bold text-green-600 dark:text-green-400">
-        {{ gameStore.elapsedTime.toFixed(1) }}
+      <div class="text-2xl font-bold text-green-600 dark:text-green-400">
+        {{ gameStore.elapsedTime.toFixed(0) }}
       </div>
       <div class="text-sm font-bold text-green-600 dark:text-green-400">s</div>
       <div class="text-sm text-gray-600 dark:text-gray-400">Time</div>
