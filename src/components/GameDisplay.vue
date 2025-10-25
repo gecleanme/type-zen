@@ -39,6 +39,8 @@ function handleMobileInput(event) {
 }
 
 function handleMobileKeydown(event) {
+  event.stopPropagation()
+
   if (event.key === 'Backspace') {
     event.preventDefault()
     gameStore.handleKeyPress('Backspace')
