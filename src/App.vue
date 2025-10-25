@@ -141,6 +141,7 @@ watch(
 
       <div class="mb-4">
         <ToggleSwitch
+          class="hidden md:flex"
           v-model="settingsStore.gameSettings.showKeyboard"
           label="Virtual Keyboard"
           v-if="gameStore.targetText"
