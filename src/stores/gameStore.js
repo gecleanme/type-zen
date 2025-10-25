@@ -15,6 +15,7 @@ export const useGameStore = defineStore('game', () => {
   const errors = ref(0)
   const currentTime = ref(Date.now())
   let intervalId = null
+  const cachedQuotes = ref([])
   const { play } = useSound(tadaSfx)
 
   // GETTERS
@@ -80,20 +81,25 @@ export const useGameStore = defineStore('game', () => {
       difficulty.value = selectedDifficulty
     }
 
-    const { getRandomQuote, printQuote, error } = useQuoteApi(difficulty.value)
+    userInput.value = ''
+    errors.value = 0
+    startTime.value = null
+    endTime.value = null
+    gameStatus.value = 'idle'
 
-    await getRandomQuote()
+    stopReactiveTimer()
 
-    if (!error.value) {
-      targetText.value = printQuote.value
+    if (cachedQuotes[difficulty.value] !== undefined) {
+      targetText.value = cachedQuotes[difficulty.value]
+    } else {
+      const { getRandomQuote, printQuote, error } = useQuoteApi(difficulty.value)
 
-      userInput.value = ''
-      errors.value = 0
-      startTime.value = null
-      endTime.value = null
-      gameStatus.value = 'idle'
+      await getRandomQuote()
 
-      stopReactiveTimer()
+      if (!error.value) {
+        targetText.value = printQuote.value
+        cachedQuotes[difficulty.value] = targetText.value
+      }
     }
   }
 
