@@ -1,6 +1,6 @@
 <script setup>
 import { useGameStore } from '@/stores/gameStore'
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, watch } from 'vue'
 
 const gameStore = useGameStore()
 const mobileInput = ref(null)
@@ -60,6 +60,15 @@ function handleInputBlur() {
     })
   }
 }
+
+watch(
+  () => gameStore.gameStatus,
+  (newStatus) => {
+    if (newStatus === 'finished' && mobileInput.value) {
+      mobileInput.value.blur()
+    }
+  },
+)
 </script>
 
 <template>
